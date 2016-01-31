@@ -19,8 +19,13 @@ public class EnemyMover : MonoBehaviour {
         }
 
         this.transform.position = Vector3.MoveTowards(transform.position, cam.transform.position, 5f * Time.deltaTime);
+		}
 
 
-
+    public void DieSoon()
+    {
+        GameController gameController = FindObjectOfType<GameController>();
+        gameController.GotOne();
+        Destroy(gameObject, 1.5f);
     }
 }
