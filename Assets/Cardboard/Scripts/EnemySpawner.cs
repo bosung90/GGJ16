@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     private GameObject cardboardHead;
 
 	// Use this for initialization
@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour {
             return;
 
         float theta = Random.Range(0, 3f * Mathf.PI / 2f);
-        GameObject enemy = Instantiate(enemyPrefab, new Vector3(this.transform.position.x + Mathf.Sin(theta)*40f, 5f, this.transform.position.z + Mathf.Cos(theta) * 40f), Quaternion.identity) as GameObject;
+        GameObject enemy = Instantiate(enemyPrefab[Random.Range(0,enemyPrefab.Length)], new Vector3(this.transform.position.x + Mathf.Sin(theta)*40f, 5f, this.transform.position.z + Mathf.Cos(theta) * 40f), Quaternion.identity) as GameObject;
         enemy.transform.forward = Vector3.Normalize(enemy.transform.position- cardboardHead.transform.position);
         Vector3 angle = enemy.transform.eulerAngles;
         angle.z = 180f;
