@@ -19,4 +19,11 @@ public class EnemyMover : MonoBehaviour {
         if (transform.position.z < -20f)
             Destroy(this.gameObject);
 	}
+
+    public void DieSoon()
+    {
+        GameController gameController = FindObjectOfType<GameController>();
+        gameController.GotOne();
+        Destroy(gameObject, 1.5f);
+    }
 }

@@ -18,4 +18,13 @@ public class RitualObjectController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Head")
+        {
+            collision.collider.GetComponent<EnemyMover>().DieSoon();
+            Destroy(gameObject);
+        }
+    }
 }
