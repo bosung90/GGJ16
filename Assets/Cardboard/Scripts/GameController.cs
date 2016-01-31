@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     public Text VRScoreText;
     public Canvas VRGameOverCanvas;
 
+    private EnemySpawner spwn;
     private int _score = 0;
     public int _deaths = 0;
     private Light light2;
