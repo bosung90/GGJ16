@@ -14,6 +14,9 @@ public class EnemySpawner : MonoBehaviour {
 
     void SendOneEnemy()
     {
+        if (FindObjectOfType<GameController>()._deaths >= 3)
+            return;
+
         float theta = Random.Range(0, 3f * Mathf.PI / 2f);
         GameObject enemy = Instantiate(enemyPrefab, new Vector3(this.transform.position.x + Mathf.Sin(theta)*40f, 5f, this.transform.position.z + Mathf.Cos(theta) * 40f), Quaternion.identity) as GameObject;
         enemy.transform.forward = Vector3.Normalize(enemy.transform.position- cardboardHead.transform.position);

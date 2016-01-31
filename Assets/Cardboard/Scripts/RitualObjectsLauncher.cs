@@ -13,7 +13,7 @@ public class RitualObjectsLauncher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Cardboard.SDK.VRModeEnabled && Cardboard.SDK.Triggered)
+	    if (Cardboard.SDK.VRModeEnabled && Cardboard.SDK.Triggered && FindObjectOfType<GameController>()._deaths < 3)
         {
             GameObject vrLauncher = Cardboard.SDK.GetComponentInChildren<CardboardHead>().gameObject;
             LaunchRitualObjectFrom(vrLauncher, _vrShooterOffset);
