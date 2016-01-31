@@ -5,9 +5,10 @@ public class RitualObjectsLauncher : MonoBehaviour {
 
     public RitualObjectController ritualObject;
     private Vector3 _vrShooterOffset;
+    public AudioSource whooshSound;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         _vrShooterOffset = new Vector3(0f, -0.4f, 1f);
 	}
 	
@@ -27,5 +28,7 @@ public class RitualObjectsLauncher : MonoBehaviour {
         Vector3 offset = origin.transform.rotation * shooterOffset;
 
         Instantiate(ritualObject, origin.transform.position + offset, Quaternion.Euler(rotation));
+
+        whooshSound.Play();
     }
 }
