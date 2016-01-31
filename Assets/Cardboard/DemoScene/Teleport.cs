@@ -32,7 +32,7 @@ public class Teleport : MonoBehaviour {
   }
 
   public void SetGazedAt(bool gazedAt) {
-    GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;
+    GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.clear;
   }
 
   public void Reset() {
