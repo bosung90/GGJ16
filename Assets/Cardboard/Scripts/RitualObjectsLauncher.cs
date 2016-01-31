@@ -5,12 +5,13 @@ public class RitualObjectsLauncher : MonoBehaviour {
 
     public RitualObjectController ritualObject;
     private Vector3 _vrShooterOffset;
-    public AudioSource whooshSound;
+    AudioSource whooshSound;
 
     // Use this for initialization
     void Start () {
         _vrShooterOffset = new Vector3(0f, -0.4f, 1f);
-	}
+        whooshSound = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
