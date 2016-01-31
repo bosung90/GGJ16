@@ -3,20 +3,24 @@ using System.Collections;
 
 public class EnemyMover : MonoBehaviour {
 
-    public Vector3 velocity = new Vector3(0, 0, -4);
-
+    GameObject cam;
 	// Use this for initialization
 	void Start ()
     {
-	    if (Cardboard.SDK.VRModeEnabled)
-        {
-            this.GetComponent<Rigidbody>().velocity = velocity;
-        }
+        cam = GameObject.FindGameObjectWithTag("CardboardHead");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.z < -20f)
+
+        if(Vector3.Distance(this.transform.position, cam.transform.position) < 10f)
+        {
             Destroy(this.gameObject);
-	}
+        }
+
+        this.transform.position = Vector3.MoveTowards(transform.position, cam.transform.position, 5f * Time.deltaTime);
+
+
+
+    }
 }

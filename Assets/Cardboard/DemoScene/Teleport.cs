@@ -44,9 +44,6 @@ public class Teleport : MonoBehaviour {
   }
 
   public void TeleportRandomly() {
-    Vector3 direction = Random.onUnitSphere;
-    direction.y = Mathf.Clamp(direction.y, 0.5f, 1f);
-    float distance = 2 * Random.value + 1.5f;
-    transform.localPosition = direction * distance;
+        this.transform.position = Vector3.MoveTowards(transform.position, Camera.main.gameObject.transform.position, 5f * Time.deltaTime); 
   }
 }
