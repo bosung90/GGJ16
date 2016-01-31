@@ -1050,7 +1050,7 @@ GameObject:
   - 114: {fileID: 955127921}
   - 114: {fileID: 955127923}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Eric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,12 +1066,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 66e971f9ef2d1444f9cb99b0f7904210, type: 2}
+  - {fileID: 2100000, guid: 3f220b2096db7204abe9d2c91243ce89, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 400002, guid: a8083bcb8ff13fd4f9a8db2cef763765, type: 3}
+  m_ProbeAnchor: {fileID: 955127919}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -1092,15 +1092,15 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7138, y: 0.68539995, z: 0.5484}
-  m_Center: {x: -0.36069998, y: 0.4057, z: 0.3098}
+  m_Size: {x: 0.357043, y: 0.342624, z: 0.274099}
+  m_Center: {x: 0.00007650256, y: -0.000040002167, z: -0.00005249679}
 --- !u!33 &955127918
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 955127915}
-  m_Mesh: {fileID: 4300000, guid: a8083bcb8ff13fd4f9a8db2cef763765, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 74e83abb2224e4541842a01fe7efd847, type: 3}
 --- !u!4 &955127919
 Transform:
   m_ObjectHideFlags: 0
@@ -1109,7 +1109,7 @@ Transform:
   m_GameObject: {fileID: 955127915}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -0.00000016292068}
   m_LocalPosition: {x: 0, y: 1.5, z: 2}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
