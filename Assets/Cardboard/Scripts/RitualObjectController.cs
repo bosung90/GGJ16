@@ -21,7 +21,7 @@ public class RitualObjectController : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Head")
+        if(collision.collider.tag == "Enemy")
         {
             collision.collider.GetComponent<EnemyMover>().DieSoon();
             Destroy(gameObject);

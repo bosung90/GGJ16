@@ -12,7 +12,7 @@ public class EnemyMover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(Vector3.Distance(this.transform.position, cam.transform.position) < 10f)
+        if(Vector3.Distance(this.transform.position, cam.transform.position) < 7f)
         {
             Destroy(this.gameObject);
 
@@ -26,6 +26,6 @@ public class EnemyMover : MonoBehaviour {
     {
         GameController gameController = FindObjectOfType<GameController>();
         gameController.GotOne();
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 1.0f);
     }
 }
