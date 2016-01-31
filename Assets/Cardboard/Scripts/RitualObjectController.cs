@@ -11,7 +11,7 @@ public class RitualObjectController : MonoBehaviour {
 	void Start () {
         head = GameObject.FindGameObjectWithTag("Head");
         this.GetComponent<Rigidbody>().velocity = head.transform.forward * objSpeed;
-        //this.GetComponent<Rigidbody>().angularVelocity = this.transform.forward * rotationSpeed;
+        this.GetComponent<Rigidbody>().angularVelocity = this.transform.forward * rotationSpeed;
         Destroy(this.gameObject, 10f);
 	}
 	
